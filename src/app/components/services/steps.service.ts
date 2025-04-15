@@ -10,20 +10,23 @@ export class StepsService {
   getSteps(): IStep[] {
     return [
       {
-        title: 'Step1',
-        description: 'Step 1 description',
+        title: 'Dedicate many hours ',
+        description:
+          'A minimum of 30 hours a week. If you dont have enough, you will have to dedicate more hours to it. At first it seems impossible, but you will notice an improvement quickly.',
         image: '',
         bgcolor: '',
       },
       {
-        title: 'Step2',
-        description: 'Step2  description',
+        title: 'Program your own projects:',
+        description:
+          '10 hours working on your own projects is better than 10 hours watching tutorials. Motivation and involvement in the project will help accelerate your learning.',
         image: '',
         bgcolor: '',
       },
       {
-        title: 'Step3',
-        description: 'Step3  description',
+        title: 'Try to rest:',
+        description:
+          'Getting enough rest and disconnecting are vital. This way you will reduce stress and anxiety. You will improve your concentration and consolidate your learning.',
         image: '',
         bgcolor: '',
       },
