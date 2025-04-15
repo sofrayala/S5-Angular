@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SceneComponent } from '../scene/scene.component';
-import { StepsService } from '../services/steps.service';
+import { StepsService } from '../../services/steps.service';
 import { IStep } from '../../interface/i-step';
 
 @Component({

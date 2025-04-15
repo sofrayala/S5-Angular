@@ -1,4 +1,5 @@
-<ul *ngFor="let step of steps">
+<div *ngFor="let step of steps">
+  <img [src]="step.image" alt="{{ step.title }}" />
   <h3>{{ step.title }}</h3>
   <span>{{ step.description }}</span>
-</ul>
+</div>
