@@ -14,21 +14,21 @@ export class StepsService {
         description:
           'A minimum of 30 hours a week. If you dont have enough, you will have to dedicate more hours to it. At first it seems impossible, but you will notice an improvement quickly.',
         image: '../assets/time_managment.svg',
-        bgcolor: '',
+        bgcolor: '#009999',
       },
       {
         title: 'Program your own projects:',
         description:
           '10 hours working on your own projects is better than 10 hours watching tutorials. Motivation and involvement in the project will help accelerate your learning.',
         image: '../assets/programming.svg',
-        bgcolor: '',
+        bgcolor: '#E0E0E0',
       },
       {
         title: 'Try to rest:',
         description:
           'Getting enough rest and disconnecting are vital. This way you will reduce stress and anxiety. You will improve your concentration and consolidate your learning.',
         image: '../assets/meditation.svg',
-        bgcolor: '',
+        bgcolor: '#FFDC28',
       },
     ];
   }
