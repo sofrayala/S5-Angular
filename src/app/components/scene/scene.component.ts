@@ -23,4 +23,8 @@ export class SceneComponent {
       this.currentStep--;
     }
   }
+
+  goToStep(index: number): void {
+    this.currentStep = index;
+  }
 }

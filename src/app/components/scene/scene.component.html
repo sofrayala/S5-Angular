@@ -1,5 +1,4 @@
 <article>
-  <!-- *ngFor="let step of steps" -->
   <div class="card" style="width: 18rem">
     <div
       id="img-div"
@@ -16,11 +15,21 @@
       <p class="card-text">{{ steps[currentStep].description }}</p>
 
       <footer>
+        <div id="dots-div">
+          <i
+            *ngFor="let step of steps; let i = index"
+            class="bi bi-circle-fill"
+            [class.active]="i === currentStep"
+            id="dot"
+            (click)="goToStep(i)"
+          >
+          </i>
+        </div>
         <div id="button-div">
           <i
             *ngIf="currentStep > 0"
             id="button-left"
-            class="bi bi-arrow-left-circle-fill"
+            class="bi bi-arrow-left-circle"
             (click)="previousStep()"
           ></i>
           <i
