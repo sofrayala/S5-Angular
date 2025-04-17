@@ -10,4 +10,17 @@ import { IStep } from '../../interface/i-step';
 })
 export class SceneComponent {
   @Input() steps: IStep[] = [];
+  currentStep: number = 0;
+
+  nextStep(): void {
+    if (this.currentStep < this.steps.length - 1) {
+      this.currentStep++;
+    }
+  }
+
+  previousStep(): void {
+    if (this.currentStep > 0) {
+      this.currentStep--;
+    }
+  }
 }

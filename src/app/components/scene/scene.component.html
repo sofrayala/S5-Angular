@@ -1,19 +1,36 @@
 <article>
-  <div *ngFor="let step of steps" class="card" style="width: 18rem">
+  <!-- *ngFor="let step of steps" -->
+  <div class="card" style="width: 18rem">
     <div
       id="img-div"
       class="card-img-top"
-      [ngStyle]="{ 'background-color': step.bgcolor }"
+      [ngStyle]="{ 'background-color': steps[currentStep].bgcolor }"
     >
-      <img [src]="step.image" alt="{{ step.title }}" />
+      <img
+        [src]="steps[currentStep].image"
+        alt="{{ steps[currentStep].title }}"
+      />
     </div>
     <div class="card-body">
-      <h5 class="card-title">{{ step.title }}</h5>
-      <p class="card-text">{{ step.description }}</p>
+      <h5 class="card-title">{{ steps[currentStep].title }}</h5>
+      <p class="card-text">{{ steps[currentStep].description }}</p>
 
-      <div id="button-div">
-        <i id="button-1" class="bi bi-arrow-right-circle-fill"></i>
-      </div>
+      <footer>
+        <div id="button-div">
+          <i
+            *ngIf="currentStep > 0"
+            id="button-left"
+            class="bi bi-arrow-left-circle-fill"
+            (click)="previousStep()"
+          ></i>
+          <i
+            *ngIf="currentStep < steps.length - 1"
+            id="button-right"
+            class="bi bi-arrow-right-circle-fill"
+            (click)="nextStep()"
+          ></i>
+        </div>
+      </footer>
     </div>
   </div>
 </article>

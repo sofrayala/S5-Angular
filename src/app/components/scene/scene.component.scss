@@ -41,17 +41,29 @@ article {
   font-weight: bold;
 }
 
+footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #button-div {
   margin: 3rem 0rem;
   display: flex;
-  justify-content: end;
   width: 100%;
+  justify-content: end;
+  padding: 0;
 }
 
-#button-1 {
+#button-left,
+#button-right {
   height: 3rem;
   width: auto;
-  font-size: 45px;
+  font-size: 40px;
+  padding: 0;
+}
+
+#button-left {
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 600px) {
@@ -63,7 +75,8 @@ article {
     margin: 0.5rem 0rem;
   }
 
-  #button-1 {
+  #button-left,
+  #button-right {
     height: 2rem;
   }
 }
