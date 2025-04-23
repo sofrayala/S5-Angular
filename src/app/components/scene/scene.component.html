@@ -1,45 +1,53 @@
 <article>
-  <div class="card" style="width: 18rem">
+  <ng-container *ngFor="let step of steps; let i = index">
     <div
-      id="img-div"
-      class="card-img-top"
-      [ngStyle]="{ 'background-color': steps[currentStep].bgcolor }"
+      class="card"
+      style="width: 18rem"
+      [@flyInOut]="'in'"
+      *ngIf="i === currentStep"
     >
-      <img
-        [src]="steps[currentStep].image"
-        alt="{{ steps[currentStep].title }}"
-      />
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">{{ steps[currentStep].title }}</h5>
-      <p class="card-text">{{ steps[currentStep].description }}</p>
+      <div
+        id="img-div"
+        class="card-img-top"
+        [ngStyle]="{ 'background-color': steps[currentStep].bgcolor }"
+      >
+        <img
+          [src]="steps[currentStep].image"
+          alt="{{ steps[currentStep].title }}"
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ steps[currentStep].title }}</h5>
+        <p class="card-text">{{ steps[currentStep].description }}</p>
 
-      <footer>
-        <div id="dots-div">
-          <i
-            *ngFor="let step of steps; let i = index"
-            class="bi bi-circle-fill"
-            [class.active]="i === currentStep"
-            id="dot"
-            (click)="goToStep(i)"
-          >
-          </i>
-        </div>
-        <div id="button-div">
-          <i
-            *ngIf="currentStep > 0"
-            id="button-left"
-            class="bi bi-arrow-left-circle"
-            (click)="previousStep()"
-          ></i>
-          <i
-            *ngIf="currentStep < steps.length - 1"
-            id="button-right"
-            class="bi bi-arrow-right-circle-fill"
-            (click)="nextStep()"
-          ></i>
-        </div>
-      </footer>
+        <footer>
+          <div id="dots-div">
+            <i
+              *ngFor="let step of steps; let i = index"
+              class="bi bi-circle-fill"
+              [class.active]="i === currentStep"
+              id="dot"
+              (click)="goToStep(i)"
+            >
+            </i>
+          </div>
+          <div id="button-div">
+            <i
+              *ngIf="currentStep > 0"
+              id="button-left"
+              class="bi bi-arrow-left-circle"
+              class="bi bi-arrow-left-circle"
+              (click)="previousStep()"
+            ></i>
+            <i
+              *ngIf="currentStep < steps.length - 1"
+              id="button-right"
+              class="bi bi-arrow-right-circle-fill"
+              (click)="nextStep()"
+            ></i>
+          </div>
+        </footer>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </article>
