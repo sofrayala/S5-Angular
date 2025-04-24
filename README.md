@@ -1,8 +1,19 @@
 # S5Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8, with a card element whicih show programming steps, it also has functional button to go to the previous and next step. And it includes an animation from angular animations.
+
+# Technologies
+
+Angular
+Typescript
+HTML
+CSS
+SCSS
+Bootstrap
 
 ## Development server
+
+First make sure you have node.js installed , if not run: npm install
 
 To start a local development server, run:
 
